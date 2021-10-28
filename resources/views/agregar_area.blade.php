@@ -4,7 +4,7 @@
     <div class="container">
         <div class="columns">
             <div class="column is-half-tablet">
-                <h1 class="is-size-1">Agregar área</h1>
+                <h1 class="is-size-1">Agregar Departamento</h1>
                 <form method="POST" action="{{route("guardarArea")}}">
                     @csrf
                     <div class="field">
@@ -17,7 +17,7 @@
                     @include("errores")
                     @include("notificacion")
                     <button class="button is-success">Guardar</button>
-                    <a class="button is-primary" href="{{route("areas")}}">Ver todas</a>
+                    <a class="button is-primary" href="{{route("areas")}}">Ver Departamentos</a>
                 </form>
                 <br>
             </div>

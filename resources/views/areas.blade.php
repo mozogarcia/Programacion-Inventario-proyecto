@@ -8,7 +8,7 @@
                     <div class="columns is-vcentered">
                         <div class="column">
                             @verbatim
-                                <h4 class="is-size-4">Áreas ({{paginacion.total}})</h4>
+                                <h4 class="is-size-4">Departamentos ({{paginacion.total}})</h4>
                             @endverbatim
                         </div>
                         <div class="column">
@@ -39,7 +39,7 @@
                         <div class="column">
                             <div class="field is-grouped is-pulled-right">
                                 <div class="control">
-                                    <a href="{{route("formularioArea")}}" class="button is-success">Agregar</a>
+                                    <a href="{{route("formularioArea")}}" class="button is-link">Agregar</a>
                                 </div>
                                 <div class="control">
                                     @verbatim
@@ -71,7 +71,7 @@
                 <transition name="fade">
                     <div v-show="areas.length <= 0 && !busqueda && !cargando.lista"
                          class="notification is-info has-text-centered">
-                        <h3 class="is-size-3">No hay áreas</h3>
+                        <h3 class="is-size-3">No hay Departamentos</h3>
                         <div>
                             <h1 class="icono-gigante">
                                 <i class="fas fa-box-open"></i>
@@ -113,7 +113,7 @@
                                     </span>
                                 </button>
                             </th>
-                            <th>Área</th>
+                            <th>Departamento</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
                         </tr>

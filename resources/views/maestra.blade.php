@@ -22,10 +22,10 @@
 
 <body>
 @if(Auth::check())
-    <nav class="navbar is-transparent has-shadow is-spaced">
+    <nav class="navbar is-link ;">
         <div class="navbar-brand">
             <a class="navbar-item" href="#">
-                <img class="logo" style="max-height: 100%;" src="{{url("/img/logo.png") }}"
+                <img class="logo" style="max-height: 100%;" src="{{url("/img/logo.jpg") }}"
                      alt="Aquí el logotipo de la empresa"
                      width="150" height="20">
             </a>
@@ -38,25 +38,21 @@
         <div id="menuPrincipal" class="navbar-menu">
             <div class="navbar-start">
                 <a class="navbar-item" href="{{ route("areas") }}">
-                    <span class="icon has-text-danger">
+                    <span class="icon has-text">
                         <i class="fa fa-home"></i>
-                    </span>&nbsp;Áreas
+                    </span>&nbsp;Departamentos
                 </a>
                 <a class="navbar-item" href="{{ route("responsables") }}">
-                    <span class="icon has-text-success">
+                    <span class="icon has-text-Success">
                         <i class="fa fa-users"></i>
-                    </span>&nbsp;Responsables
+                    </span>&nbsp;Encargados
                 </a>
                 <a class="navbar-item" href="{{ route("articulos") }}">
-                    <span class="icon has-text-info">
+                    <span class="icon has-text-Success">
                         <i class="fa fa-box"></i>
-                    </span>&nbsp;Inventario
+                    </span>&nbsp;Detalle de productos
                 </a>
-                <a class="navbar-item" href="#">
-                    <span class="icon has-text-info">
-                        <i class="fa fa-chart-line"></i>
-                    </span>&nbsp;Reportes
-                </a>
+                
             </div>
 
             <div class="navbar-end">
@@ -65,7 +61,7 @@
                         <a class="button"
                            href="{{route("logout")}}">
                             <strong>Salir</strong>&nbsp;({{Auth::user()->nombre}})
-                            <span class="icon has-text-danger">
+                            <span class="icon has-text-info">
                                 <i class="fa fa-sign-out-alt"></i>
                             </span>
                         </a>

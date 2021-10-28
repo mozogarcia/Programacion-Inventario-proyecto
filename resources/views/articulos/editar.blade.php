@@ -4,7 +4,7 @@
     <div class="container" id="app">
         <div class="columns">
             <div class="column">
-                <h1 class="is-size-1">Editar artículo</h1>
+                <h1 class="is-size-1">Editar producto</h1>
                 <div class="field is-horizontal">
                     <div class="field-body">
                         <div class="field">
@@ -14,16 +14,16 @@
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">Código</label>
+                            <label class="label">Código de producto</label>
                             <div class="control">
-                                <input placeholder="Código identificador" v-model="articulo.codigo" autocomplete="off"
+                                <input placeholder="Código" v-model="articulo.codigo" autocomplete="off"
                                        class="input" type="text">
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">Número/folio de comprobante</label>
+                            <label class="label">Número de invoice</label>
                             <div class="control">
-                                <input placeholder="Folio o número" v-model="articulo.numeroFolioComprobante"
+                                <input placeholder="numero" v-model="articulo.numeroFolioComprobante"
                                        autocomplete="off"
                                        class="input" type="text">
                             </div>
@@ -33,23 +33,23 @@
                 <div class="columns">
                     <div class="column">
                         <div class="field">
-                            <label class="label">Marca</label>
+                            <label class="label">cliente</label>
                             <div class="control">
-                                <input placeholder="La marca del artículo" v-model="articulo.marca" autocomplete="off"
+                                <input placeholder="Nombre de cliente" v-model="articulo.marca" autocomplete="off"
                                        class="input" type="text">
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">Modelo</label>
+                            <label class="label">Estilo</label>
                             <div class="control">
-                                <input placeholder="El modelo del artículo" v-model="articulo.modelo" autocomplete="off"
+                                <input placeholder="Estilo" v-model="articulo.modelo" autocomplete="off"
                                        class="input" type="text">
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">Serie</label>
+                            <label class="label">Item</label>
                             <div class="control">
-                                <input placeholder="Número de serie del artículo" v-model="articulo.serie"
+                                <input placeholder="Nombre de item" v-model="articulo.serie"
                                        autocomplete="off" class="input" type="text">
                             </div>
                         </div>
@@ -75,17 +75,17 @@
                                         <div class="select is-fullwidth">
                                             <select v-model="articulo.estado">
                                                 <option value="regular">Regular</option>
-                                                <option value="malo">Malo</option>
-                                                <option value="inservible">Inservible</option>
+                                                <option value="malo">Rechazado</option>
+                                                <option value="inservible">Averia</option>
                                                 <option value="noEncontrado">No encontrado físicamente</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="field">
-                                    <label class="label">Costo de adquisición</label>
+                                    <label class="label">monto</label>
                                     <div class="control">
-                                        <input placeholder="Precio de adquisición" v-model="articulo.costoAdquisicion"
+                                        <input placeholder="Precio" v-model="articulo.costoAdquisicion"
                                                autocomplete="off"
                                                class="input" type="number">
                                     </div>

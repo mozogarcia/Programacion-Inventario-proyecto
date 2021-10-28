@@ -56,7 +56,7 @@
                 @include("errores")
                 @include("notificacion")
                 @verbatim
-                    <button :class="{'is-loading':cargando}" @click="guardar()" class="button is-success">Guardar
+                    <button :class="{'is-loading':cargando}" @click="guardar()" class="button is-link">Guardar
                     </button>
                 @endverbatim
                 <a class="button is-primary" href="{{route("responsables")}}">Ver todos</a>

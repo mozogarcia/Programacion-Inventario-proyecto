@@ -39,7 +39,7 @@
                         <div class="column">
                             <div class="field is-grouped is-pulled-right">
                                 <div class="control">
-                                    <a href="{{route("formularioAgregarResponsable")}}" class="button is-success">Agregar</a>
+                                    <a href="{{route("formularioAgregarResponsable")}}" class="button is-link">Agregar</a>
                                 </div>
                                 <div class="control">
                                     @verbatim
@@ -113,7 +113,7 @@
                                     </span>
                                 </button>
                             </th>
-                            <th>Área</th>
+                            <th>Departamento</th>
                             <th>Nombre</th>
                             <th>Dirección</th>
                             <th>Editar</th>
