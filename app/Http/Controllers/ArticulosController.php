@@ -73,6 +73,7 @@ class ArticulosController extends Controller
         $articulo->observaciones = $peticion->observaciones;
         $articulo->costo_adquisicion = $peticion->costoAdquisicion;
         $articulo->cantidad = $peticion->cantidad;
+
        
         $articulo->areas_id = $datosDecodificados->areas_id;
         return response()->json($articulo->save());

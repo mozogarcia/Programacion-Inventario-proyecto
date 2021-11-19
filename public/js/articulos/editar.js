@@ -37,7 +37,8 @@ new Vue({
             estado: "regular",
             observaciones: "",
             costoAdquisicion: "",
-            cantidad: "",
+           
+            monto: "",
             
         },
         errores: [],
@@ -66,6 +67,8 @@ new Vue({
             this.articulo.estado = articulo.estado;
             this.articulo.observaciones = articulo.observaciones;
             this.articulo.costoAdquisicion = articulo.costo_adquisicion;
+            this.articulo.cantidad = articulo.cantidad;
+            
             this.areaSeleccionada.nombre = articulo.area.nombre;
             this.areaSeleccionada.id = articulo.area.id;
         });
@@ -88,6 +91,8 @@ new Vue({
                     estado: this.articulo.estado,
                     observaciones: this.articulo.observaciones,
                     costoAdquisicion: this.articulo.costoAdquisicion,
+                    cantidad: this.articulo.cantidad,
+                    
                     areas_id: this.areaSeleccionada.id
                 })
                 .then(resultado => {
@@ -142,6 +147,8 @@ new Vue({
                 estado: "regular",
                 observaciones: "",
                 costoAdquisicion: "",
+               
+                cantidad: "",
             };
             this.errores = [];
             this.cargando = false;

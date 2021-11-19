@@ -90,6 +90,17 @@
                                                class="input" type="number">
                                     </div>
                                 </div>
+
+
+
+                                <div class="field">
+                                    <label class="label">cantidad</label>
+                                    <div class="control">
+                                        <input placeholder="Precio" v-model="articulo.cantidad"
+                                               autocomplete="off"
+                                               class="input" type="number">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <nav class="panel">
