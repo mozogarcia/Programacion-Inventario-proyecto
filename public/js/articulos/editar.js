@@ -37,6 +37,8 @@ new Vue({
             estado: "regular",
             observaciones: "",
             costoAdquisicion: "",
+            cantidad: "",
+            
         },
         errores: [],
         cargando: false,

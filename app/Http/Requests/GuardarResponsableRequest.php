@@ -32,20 +32,7 @@ class GuardarResponsableRequest extends FormRequest
 
     public function all($keys = null)
     {
-        /*
-         * Esto regresa un arreglo ya mapeado como si fuera un formulario. Por ejemplo, si
-         * el objeto JSON es:
-         * {
-         *  nombre: "Luis",
-         *  direccion: "New New York",
-         * }
-         *
-         * Lo convierte a un array indexado por claves de string
-         * [
-         *  "nombre" => "Luis",
-         *  "dreccion" => "New New York"
-         * ]
-         * */
+        
         if (empty($keys)) {
             return parent::json()->all();
         }

@@ -17,6 +17,9 @@ class ResponsablesController extends Controller
         $responsable = new Responsable;
         $responsable->nombre = $datosDecodificados->nombre;
         $responsable->direccion = $datosDecodificados->direccion;
+        $responsable->contacto = $datosDecodificados->contacto;
+        $responsable->telefono = $datosDecodificados->telefono;
+        $responsable->email = $datosDecodificados->email;
         $responsable->areas_id = $datosDecodificados->areas_id;
         return response()->json($responsable->save());
     }
@@ -36,6 +39,9 @@ class ResponsablesController extends Controller
         $responsable = Responsable::findOrFail($idResponsable);
         $responsable->nombre = $datosDecodificados->nombre;
         $responsable->direccion = $datosDecodificados->direccion;
+        $responsable->contacto = $datosDecodificados->contacto;
+        $responsable->telefono = $datosDecodificados->telefono;
+        $responsable->email = $datosDecodificados->email;
         $responsable->areas_id = $datosDecodificados->areas_id;
         return response()->json($responsable->save());
 

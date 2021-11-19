@@ -8,6 +8,7 @@
             font-family: 'Open Sans', serif;
             font-size: 14px;
             font-weight: 300;
+            background-image: url(../img/fondologin.jpg);
         }
 
         .hero.is-success {
@@ -48,8 +49,8 @@
             padding-top: 1rem;
         }
     </style>
-    <section class="hero is-success is-fullheight" id="app">
-        <div class="hero-body">
+    <section >
+        <div >
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
                     <h3 class="title has-text-grey">Bienvenido </h3>

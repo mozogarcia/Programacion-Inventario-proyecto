@@ -37,6 +37,8 @@ new Vue({
             estado: "regular",
             observaciones: "",
             costoAdquisicion: "",
+            cantidad: "",
+            
         },
         errores: [],
         cargando: false,
@@ -59,6 +61,7 @@ new Vue({
                     estado: this.articulo.estado,
                     observaciones: this.articulo.observaciones,
                     costoAdquisicion: this.articulo.costoAdquisicion,
+                    cantidad: this.articulo.cantidad,
                     areas_id: this.areaSeleccionada.id
                 })
                 .then(resultado => {
@@ -113,6 +116,7 @@ new Vue({
                 estado: "regular",
                 observaciones: "",
                 costoAdquisicion: "",
+                cantidad: "",
             };
             this.errores = [];
             this.cargando = false;

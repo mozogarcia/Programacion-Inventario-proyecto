@@ -12,21 +12,52 @@
                                placeholder="Nombre del responsable">
                     </div>
                 </div>
+
+        
+
                 <div class="field">
-                    <label class="label">Dirección</label>
+                    <label class="label">contacto</label>
+                    <div class="control">
+                        <input v-model="responsable.contacto" autocomplete="off" name="contacto" class="input" type="text"
+                               placeholder="Contacto">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">telefono</label>
+                    <div class="control">
+                        <input v-model="responsable.telefono" autocomplete="off" name="telefono" class="input" type="text"
+                               placeholder="Telefono">
+                    </div>
+                </div>
+
+
+                <div class="field">
+                    <label class="label">Correo electronico</label>
+                    <div class="control">
+                        <input v-model="responsable.email" autocomplete="off" name="email" class="input" type="email"
+                               placeholder="Correo Electronico">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Direccion</label>
                     <div class="control">
                             <textarea v-model="responsable.direccion" class="textarea"
                                       placeholder="Dirección del responsable" name="direccion"
                                       id="direccion" cols="30" rows="3"></textarea>
                     </div>
                 </div>
+
+
+
                 <nav class="panel">
                     <div class="panel-block">
                         <p class="control">
-                            <label class="label">Área</label>
+                            <label class="label">Proveedor</label>
                             <input @focus="mostrar.areas = true" v-model="busqueda"
                                    @keyup="buscarArea()" class="input is-loading" type="text"
-                                   placeholder="Buscar área">
+                                   placeholder="Buscar Proveedor">
                         </p>
                     </div>
                     @verbatim

@@ -53,7 +53,9 @@ Route::group(
                 Route::put("articulo/", "ArticulosController@guardarCambios")->name("guardarCambiosDeResponsable");
                 // Fotos de artículos
                 Route::post("eliminar/foto/articulo/", "ArticulosController@eliminarFoto")->name("eliminarFotoDeArticulo");
+                
 
+                Route::get("inventario", "InventarioController@mostrar");
             });
 
 
@@ -75,11 +77,14 @@ Route::group(
         Route::view("responsables/agregar", "responsables/agregar")->name("formularioAgregarResponsable");
         Route::view("responsables/", "responsables/mostrar")->name("responsables");
         Route::view("responsables/editar/{id}", "responsables/editar")->name("formularioEditarResponsable");
-        //-------------------------------
+       
+       
         // Artículos
         //-------------------------------
         Route::view("articulos/agregar", "articulos.agregar")->name("formularioAgregarArticulo");
         Route::view("articulos/", "articulos/mostrar")->name("articulos");
+        Route::view("articulos/inventario", "articulos/inventario")->name("inventario");
+
         Route::view("articulos/editar/{id}", "articulos/editar")->name("formularioEditarArticulo");
         Route::get("articulos/fotos/{id}", "ArticulosController@administrarFotos")->name("administrarFotos");
         Route::get("articulos/eliminar/{id}", "ArticulosController@vistaDarDeBaja")->name("vistaDarDeBajaArticulo");

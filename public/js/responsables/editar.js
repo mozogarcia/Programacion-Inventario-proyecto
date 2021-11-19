@@ -45,6 +45,10 @@ new Vue({
         responsable: {
             nombre: "",
             direccion: "",
+            telefono: "",
+            contacto: "",
+            email: "",
+            
             id: null,
         },
         errores: [],
@@ -63,6 +67,9 @@ new Vue({
             }
             this.responsable.id = responsable.id;
             this.responsable.nombre = responsable.nombre;
+            this.responsable.contacto = responsable.contacto;
+            this.responsable.telefono = responsable.telefono;
+            this.responsable.email = responsable.email;
             this.responsable.direccion = responsable.direccion;
             this.areaSeleccionada.id = responsable.area.id;
             this.areaSeleccionada.nombre = responsable.area.nombre;
@@ -78,6 +85,9 @@ new Vue({
                 .put("/responsable", {
                     id: this.responsable.id,
                     nombre: this.responsable.nombre,
+                    contacto: this.responsable.contacto,
+                    telefono: this.responsable.telefono,
+                    email: this.responsable.email,
                     direccion: this.responsable.direccion,
                     areas_id: this.areaSeleccionada.id
                 })
@@ -112,6 +122,10 @@ new Vue({
             this.areaSeleccionada = {};
             this.responsable.nombre = "";
             this.responsable.direccion = "";
+            this.responsable.contacto = "";
+            this.responsable.telefono = "";
+            this.responsable.email = "";
+
             this.errores = [];
             this.cargando = false;
             this.busqueda = "";

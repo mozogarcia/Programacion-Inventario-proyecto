@@ -4,11 +4,11 @@
     <div id="app" class="container" v-cloak>
         <div class="columns">
             <div class="column">
-                <div class="notification">
-                    <div class="columns is-vcentered">
+                <div class="notification bg-c-red">
+                    <div class="columns is-vcentered has-text-white">
                         <div class="column">
                             @verbatim
-                                <h4 class="is-size-4">Departamentos ({{paginacion.total}})</h4>
+                                <h4 class="is-size-4">Proveedores ({{paginacion.total}})</h4>
                             @endverbatim
                         </div>
                         <div class="column">
@@ -71,7 +71,7 @@
                 <transition name="fade">
                     <div v-show="areas.length <= 0 && !busqueda && !cargando.lista"
                          class="notification is-info has-text-centered">
-                        <h3 class="is-size-3">No hay Departamentos</h3>
+                        <h3 class="is-size-3">No hay Proveedores</h3>
                         <div>
                             <h1 class="icono-gigante">
                                 <i class="fas fa-box-open"></i>
@@ -99,11 +99,12 @@
                 </transition>
                 @include("errores")
                 @include("notificacion")
+                @verbatim
                 <div>
-
-                    <table v-show="areas.length > 0 && !cargando.lista"
+                
+                    <table   id="example" v-show="areas.length > 0 && !cargando.lista"
                            class="table is-bordered is-striped is-hoverable is-fullwidth">
-                        <thead>
+                        <thead >
                         <tr>
                             <th>
                                 <button @click="onBotonParaMarcarClickeado()" class="button"
@@ -113,13 +114,17 @@
                                     </span>
                                 </button>
                             </th>
-                            <th>Departamento</th>
+                            <th>Nombre</th>
+                            <th>Telefono</th>
+                            <th>Correo</th>
+                            <th>Direccion</th>
+                            <th>Contacto</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
                         </tr>
-                        </thead>
+                        </thead >
                         <tbody>
-                        @verbatim
+                       
                             <tr v-for="area in areas">
                                 <td>
                                     <button @click="invertirEstado(area)" class="button"
@@ -130,6 +135,10 @@
                                     </button>
                                 </td>
                                 <td>{{area.nombre}}</td>
+                                <td>{{area.telefono}}</td>
+                                <td>{{area.correo}}</td>
+                                <td>{{area.direccion}}</td>
+                                <td>{{area.contacto}}</td>
                                 <td>
                                     <button @click="editar(area)" class="button is-warning">
                                     <span class="icon is-small">

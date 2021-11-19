@@ -28,6 +28,9 @@ new Vue({
         responsable: {
             nombre: "",
             direccion: "",
+            contacto: "",
+            telefono: "",
+            email: ""
         },
         errores: [],
         cargando: false,
@@ -42,6 +45,9 @@ new Vue({
                 .post("/responsable", {
                     nombre: this.responsable.nombre,
                     direccion: this.responsable.direccion,
+                    contacto: this.responsable.contacto,
+                    telefono: this.responsable.telefono,
+                    email: this.responsable.email,
                     areas_id: this.areaSeleccionada.id
                 })
                 .then(resultado => {
@@ -77,6 +83,9 @@ new Vue({
             this.areaSeleccionada = {};
             this.responsable.nombre = "";
             this.responsable.direccion = "";
+            this.responsable.contacto = "";
+            this.responsable.telefono = "";
+            this.responsable.email = "";
             this.errores = [];
             this.cargando = false;
             this.busqueda = "";

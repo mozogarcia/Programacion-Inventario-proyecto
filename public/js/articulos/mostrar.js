@@ -25,12 +25,12 @@ new Vue({
     data: () => ({
         buscando: false,
         articulos: [],
-        gruposDeArticulos: [],
+  
         numeroDeElementosMarcados: 0,
         rutaBaseFoto: RUTA_FOTO_MOSTRAR_ARTICULO,
         cargando: {
             eliminandoMuchos: false,
-            lista: false,
+            lista: true,
             paginacion: false,
         },
         busqueda: "",
@@ -167,7 +167,7 @@ new Vue({
         },
         consultarArticulosConUrl(url) {
             this.desmarcarTodos();
-            this.cargando.lista = true;
+            this.cargando.lista = false;
             return HTTP.get(url)
                 .then(respuesta => {
                     // this.articulos = respuesta.data;

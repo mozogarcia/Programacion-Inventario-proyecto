@@ -31,6 +31,8 @@ class AgregarArticuloDeInventarioRequest extends FormRequest
             "estado" => "required|in:regular,malo,inservible,noEncontrado",
             "observaciones" => "max:255",
             "costoAdquisicion" => "required|numeric|between:1,99999999.99",
+            "cantidad" => "required|numeric|between:1,99999999.99",
+      
             "areas_id" => "required|exists:areas,id",//Requerido y que exista en áreas, columna id :)
         ];
     }

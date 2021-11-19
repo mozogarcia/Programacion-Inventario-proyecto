@@ -11,4 +11,5 @@ class Responsable extends Model
     {
         return $this->belongsTo("App\Area", "areas_id");
     }
+
 }

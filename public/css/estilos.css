@@ -51,3 +51,16 @@
         transform: scale(1);
     }
 }
+
+.bg-c-blue {
+    background: linear-gradient(75deg,#e4e4f0, #c9d0e6);
+  }
+
+  .bg-gris {
+    background: linear-gradient(75deg,#d3e5fd, #8098e9);
+  } 
+
+
+  .bg-c-red {
+    background: linear-gradient(75deg,#035ed4, #1a3079);
+  }

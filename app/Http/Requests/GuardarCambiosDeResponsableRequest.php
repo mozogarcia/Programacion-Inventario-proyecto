@@ -26,6 +26,9 @@ class GuardarCambiosDeResponsableRequest extends FormRequest
         return [
             "nombre" => "required|max:255",
             "direccion" => "required|max:255",
+            "contacto" => "required|max:255",
+            "telefono" => "required|max:255",
+            "email" => "required|max:255",
             "id" => "required|numeric|exists:responsables,id",
             "areas_id" => "required|numeric|exists:areas,id",//Requerido y que exista en áreas, columna id :)
         ];
@@ -33,20 +36,7 @@ class GuardarCambiosDeResponsableRequest extends FormRequest
 
     public function all($keys = null)
     {
-        /*
-         * Esto regresa un arreglo ya mapeado como si fuera un formulario. Por ejemplo, si
-         * el objeto JSON es:
-         * {
-         *  nombre: "Luis",
-         *  direccion: "New New York",
-         * }
-         *
-         * Lo convierte a un array indexado por claves de string
-         * [
-         *  "nombre" => "Luis",
-         *  "dreccion" => "New New York"
-         * ]
-         * */
+        
         if (empty($keys)) {
             return parent::json()->all();
         }

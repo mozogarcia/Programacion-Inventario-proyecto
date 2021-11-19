@@ -72,6 +72,8 @@ class ArticulosController extends Controller
         $articulo->estado = $peticion->estado;
         $articulo->observaciones = $peticion->observaciones;
         $articulo->costo_adquisicion = $peticion->costoAdquisicion;
+        $articulo->cantidad = $peticion->cantidad;
+       
         $articulo->areas_id = $datosDecodificados->areas_id;
         return response()->json($articulo->save());
     }
@@ -83,6 +85,8 @@ class ArticulosController extends Controller
             ->with(["area", "fotos"])
             ->paginate(Config::get("constantes.paginas_en_paginacion"));
     }
+
+   
 
     public function porId(Request $peticion)
     {

@@ -4,11 +4,11 @@
     <div id="app" class="container" v-cloak>
         <div class="columns">
             <div class="column">
-                <div class="notification">
+                <div class="notification bg-c-red ">
                     <div class="columns is-vcentered">
                         <div class="column">
                             @verbatim
-                                <h4 class="is-size-4">Artículos ({{paginacion.total}})</h4>
+                                <h4 class="is-size-4 has-text-white">Artículos ({{paginacion.total}})</h4>
                             @endverbatim
                         </div>
                         <div class="column">
@@ -42,10 +42,7 @@
                                     <a href="{{route("formularioAgregarArticulo")}}"
                                        class="button is-success">Agregar</a>
                                 </div>
-                                <div class="control">
-                                    <a href="{{route("formularioAgregarArticulo")}}"
-                                       class="button is-info">Imprimir códigos</a>
-                                </div>
+ 
                                 <div class="control">
                                     @verbatim
                                         <transition name="bounce">
@@ -124,8 +121,8 @@
                                 </div>
                                 <div class="content">
                                     <strong>Costo: </strong> {{articulo.costo_adquisicion}}<br>
-                                    <strong>No. folio
-                                        comprobante: </strong> {{articulo.numero_folio_comprobante}}<br>
+                                    <strong>Numero de invoice: </strong> {{articulo.numero_folio_comprobante}}<br>
+                                   
                                     <div class="field has-addons">
                                         <p class="control">
                                             <button class="button is-info" @click="administrarFotos(articulo)">
@@ -163,7 +160,7 @@
                         </div>
                     </div>
                 @endverbatim
-
+<!-- 
                 <div v-if="false" class="table-container" style="overflow: visible;">
 
                     <table v-show="articulos.length > 0 && !cargando.lista"
@@ -275,7 +272,7 @@
                             </ul>
                         @endverbatim
                     </nav>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

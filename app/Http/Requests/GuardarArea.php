@@ -24,7 +24,11 @@ class GuardarArea extends FormRequest
     public function rules()
     {
         return [
-            "nombre" => "required|max:255"
+            "nombre" => "required|max:255",
+            "telefono" => "required|max:255",
+            "correo" => "required|max:255",
+            "direccion" => "required|max:255",
+            "contacto" => "required|max:255"
         ];
     }
 }

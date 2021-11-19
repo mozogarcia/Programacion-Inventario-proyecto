@@ -25,7 +25,11 @@ class GuardarCambiosDeArea extends FormRequest
     {
         return [
             "nombre" => "required|max:255",
-            "id" => "required|numeric"
+            "id" => "required|numeric",
+            "telefono" => "required|max:255",
+            "correo" => "required|max:255",
+            "direccion" => "required|max:255",
+            "contacto" => "required|max:255",
         ];
     }
 }

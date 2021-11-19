@@ -16,6 +16,11 @@ class AreasController extends Controller
     {
         $area = new Area;
         $area->nombre = $peticion->nombre;
+        $area->telefono = $peticion->telefono;
+        $area->correo = $peticion->correo;
+        $area->direccion = $peticion->direccion;
+        $area->contacto = $peticion->contacto;
+
         $exitoso = $area->save();
         $mensaje = "Área agregada correctamente";
         $tipo = "success";
@@ -62,6 +67,11 @@ class AreasController extends Controller
         $idArea = $peticion->input("id");
         $area = Area::findOrFail($idArea);
         $area->nombre = $peticion->input("nombre");
+        $area->telefono = $peticion->input("telefono");
+        $area->correo = $peticion->input("correo");
+        $area->direccion = $peticion->input("direccion");
+        $area->correo = $peticion->input("correo");
+
         $area->save();
         return redirect()->route("areas")->with(["mensaje" => "Área editada correctamente", "tipo" => "success"]);
 
